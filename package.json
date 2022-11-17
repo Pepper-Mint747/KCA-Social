@@ -1,0 +1,21 @@
+{
+  "name": "kca_social_hub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "npm install --prefix backend",
+    "install-client": "npm install --prefix frontend",
+    "install": "npm run install-server && npm install-client",
+    "server": "npm run server --prefix backend",
+    "client": "npm start --prefix frontend",
+    "watch": "npm run server & npm run client",
+    "deploy": "npm run build --prefix client && npm start --prefix server",
+    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client",
+    "deploy-cluster": "npm run build --prefix client && npm run cluster --prefix server",
+    "test": "npm test --prefix server && npm test --prefix client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
